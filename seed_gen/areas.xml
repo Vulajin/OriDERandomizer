@@ -126,6 +126,20 @@
       </Connection>
       <Connection>
         <Home name="SunkenGladesRunaway"/>
+        <Target name="SideFallCell"/>
+        <Requirements>
+          <Requirement mode="normal">TPGrotto+Glide+Wind</Requirement>
+        </Requirements>
+      </Connection>
+      <Connection>
+        <Home name="SunkenGladesRunaway"/>
+        <Target name="WaterVeinArea"/>
+        <Requirements>
+          <Requirement mode="normal">TPGrotto+Glide+Wind</Requirement>
+        </Requirements>
+      </Connection>
+      <Connection>
+        <Home name="SunkenGladesRunaway"/>
         <Target name="HollowGrove"/>
         <Requirements>
           <Requirement mode="normal">TPSwamp</Requirement>
@@ -548,7 +562,7 @@
         <Target name="SpiritCavernsTopLeft"/>
         <Requirements>
           <Requirement mode="normal">WallJump</Requirement>
-          <Requirement mode="normal">DoubleJump</Requirement>
+          <Requirement mode="normal">DoubleJump+Bash</Requirement>
           <Requirement mode="dboost-light">ChargeJump</Requirement>
           <Requirement mode="dboost-light">Bash+WallJump</Requirement>
           <Requirement mode="dboost-light">Bash+Climb</Requirement>
@@ -562,7 +576,7 @@
         <Requirements>
           <Requirement mode="normal">WallJump</Requirement>
           <Requirement mode="normal">Climb</Requirement>
-          <Requirement mode="normal">DoubleJump</Requirement>
+          <Requirement mode="normal">DoubleJump+Bash</Requirement>
           <Requirement mode="dboost-light">ChargeJump</Requirement>
           <Requirement mode="dboost-light">Bash+WallJump</Requirement>
           <Requirement mode="dboost-light">Bash+Climb</Requirement>
@@ -1948,7 +1962,6 @@
           <Requirement mode="normal">WallJump</Requirement>
           <Requirement mode="normal">Climb</Requirement>
           <Requirement mode="normal">Bash+Grenade</Requirement>
-          <Requirement mode="normal">ChargeJump</Requirement>
         </Requirements>
       </Connection>
       <Connection>
@@ -2433,21 +2446,29 @@
         <Home name="SideFallCell"/>
         <Target name="GumoHideout"/>
         <Requirements>
-          <Requirement mode="normal">Free</Requirement>
+          <Requirement mode="normal">Climb</Requirement>
+          <Requirement mode="normal">WallJump</Requirement>
+          <Requirement mode="normal">Grenade+Bash</Requirement>
         </Requirements>
       </Connection>
       <Connection>
         <Home name="SideFallCell"/>
         <Target name="GumoHideoutPartialMobile"/>
         <Requirements>
-          <Requirement mode="normal">Free</Requirement>
+          <Requirement mode="normal">Climb</Requirement>
+          <Requirement mode="normal">WallJump</Requirement>
+          <Requirement mode="normal">Grenade+Bash</Requirement>
+          <Requirement mode="normal">ChargeJump</Requirement>
         </Requirements>
       </Connection>
       <Connection>
         <Home name="SideFallCell"/>
         <Target name="GumoHideoutRedirectAC"/>
         <Requirements>
-          <Requirement mode="dboost-light">Free</Requirement>
+          <Requirement mode="normal">Climb</Requirement>
+          <Requirement mode="normal">WallJump</Requirement>
+          <Requirement mode="normal">Grenade+Bash</Requirement>
+          <Requirement mode="dboost-light">ChargeJump</Requirement>
         </Requirements>
       </Connection>
     </Connections>
@@ -2557,6 +2578,13 @@
           <Requirement mode="normal">Glide+Wind</Requirement>
           <Requirement mode="normal">ChargeJump</Requirement>
           <Requirement mode="dbash">Bash</Requirement>
+        </Requirements>
+      </Connection>
+      <Connection>
+        <Home name="GumoHideout"/>
+        <Target name="WaterVeinArea"/>
+        <Requirements>
+          <Requirement mode="normal">Glide+Wind</Requirement>
         </Requirements>
       </Connection>
     </Connections>
@@ -2684,20 +2712,6 @@
         <Zone>Grotto</Zone>
       </Location>
       <Location>
-        <X>567</X>
-        <Y>-246</Y>
-        <Item>EX100</Item>
-        <Difficulty>1</Difficulty>
-        <Zone>Grotto</Zone>
-      </Location>
-      <Location>
-        <X>0</X>
-        <Y>0</Y>
-        <Item>EVGinsoKey</Item>
-        <Difficulty>1</Difficulty>
-        <Zone>Grotto</Zone>
-      </Location>
-      <Location>
         <X>406</X>
         <Y>-386</Y>
         <Item>EX100</Item>
@@ -2744,6 +2758,33 @@
           <Requirement mode="cdash">Dash</Requirement>
         </Requirements>
       </Connection>
+      <Connection>
+        <Home name="MobileGumoHideout"/>
+        <Target name="WaterVeinArea"/>
+        <Requirements>
+          <Requirement mode="normal">Free</Requirement>
+        </Requirements>
+      </Connection>
+    </Connections>
+  </Area>
+  <Area name="WaterVeinArea">
+    <Locations>
+      <Location>
+        <X>567</X>
+        <Y>-246</Y>
+        <Item>EX100</Item>
+        <Difficulty>1</Difficulty>
+        <Zone>Grotto</Zone>
+      </Location>
+      <Location>
+        <X>0</X>
+        <Y>0</Y>
+        <Item>EVGinsoKey</Item>
+        <Difficulty>1</Difficulty>
+        <Zone>Grotto</Zone>
+      </Location>
+    </Locations>
+    <Connections>
     </Connections>
   </Area>
   <Area name="MobileGumoHideoutPlants">
@@ -3022,7 +3063,7 @@
           <Requirement mode="extended">KS+KS+KS+KS+Bash+ChargeJump</Requirement>
           <Requirement mode="extended-damage">KS+KS+KS+KS+ChargeJump+HC+HC+HC+HC+HC</Requirement>
           <Requirement mode="extended-damage">KS+KS+KS+KS+ChargeJump+DoubleJump</Requirement>
-          <Requirement mode="extreme">WallJump+DoubleJump+HC+HC+HC+HC+HC+HC+HC</Requirement>
+          <Requirement mode="extreme">KS+KS+KS+KS+WallJump+DoubleJump+HC+HC+HC+HC+HC+HC+HC</Requirement>
           <!-- this can be reached with chargejump only due to a micro ledge-->
         </Requirements>
       </Connection>
@@ -3447,6 +3488,7 @@
           <Requirement mode="normal">HoruKey+Bash+Glide+ChargeJump+Climb</Requirement>
           <Requirement mode="extended">HoruKey+Bash+Grenade+WallJump</Requirement>
           <Requirement mode="extended">HoruKey+Bash+Grenade+Climb</Requirement>
+          <Requirement mode="extreme">ChargeJump+WallJump+DoubleJump+HC+HC+HC+HC</Requirement>
         </Requirements>
       </Connection>
       <Connection>
@@ -4142,6 +4184,14 @@
         </Requirements>
       </Connection>
       <Connection>
+        <Entrance/>
+        <Home name="HoruHub"/>
+        <Target name="HoruBottom"/>
+        <Requirements>
+          <Requirement mode="normal">Free</Requirement>
+        </Requirements>
+      </Connection>
+      <Connection>
         <Home name="HoruHub"/>
         <Target name="HoruEscapeOuterDoor"/>
         <Requirements>
@@ -4500,6 +4550,14 @@
         <Target name="OutsideForlornGrenade"/>
         <Requirements>
           <Requirement mode="normal">Grenade</Requirement>
+        </Requirements>
+      </Connection>
+      <Connection>
+        <Home name="ValleyMain"/>
+        <Target name="OutsideForlorn"/>
+        <Requirements>
+          <Requirement mode="normal">Bash+Stomp</Requirement>
+          <Requirement mode="extended">Bash</Requirement>
         </Requirements>
       </Connection>
       <Connection>
